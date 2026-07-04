@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Sachin Pandey — Master Business Operation System",
   description:
     "SEO + automation systems operator helping SMBs improve search visibility, reporting and growth operations.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "Sachin Pandey — Master Business Operation System",
     description:

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function SiteHeader() {
   const links = [
@@ -14,9 +15,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Link href="/" className="group flex min-w-0 items-center gap-2.5">
-          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-gradient-brand text-[15px] font-semibold text-primary-foreground shadow-md">
-            S
-          </span>
+          <Image
+            src="/favicon.svg"
+            alt="Sachin Pandey"
+            width={32}
+            height={32}
+            className="h-8 w-8 shrink-0 rounded-lg shadow-md"
+          />
           <span className="flex min-w-0 flex-col leading-tight">
             <span className="truncate text-[15px] font-semibold text-foreground">
               Sachin Pandey
@@ -56,9 +61,13 @@ export function SiteFooter() {
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2.5">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-brand text-sm font-semibold text-primary-foreground">
-              S
-            </span>
+            <Image
+              src="/favicon.svg"
+              alt="Sachin Pandey"
+              width={32}
+              height={32}
+              className="h-8 w-8 rounded-lg"
+            />
             <span className="text-[15px] font-semibold">Sachin Pandey</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
