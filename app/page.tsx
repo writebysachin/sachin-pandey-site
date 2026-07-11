@@ -59,13 +59,15 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0 -z-10 bg-gradient-brand-soft" />
+        {/* Hero images: placed in flow so they don't overlap text and can wrap */}
         <div
           className="absolute -top-32 left-1/2 -z-10 h-[520px] w-[820px] -translate-x-1/2 rounded-full blur-3xl opacity-60"
           style={{ background: "var(--gradient-brand)" }}
           aria-hidden
         />
         <div className="container-page py-24 md:py-32">
-          <div className="max-w-3xl">
+          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-success" />
               Building publicly · accepting a small number of clients
@@ -109,6 +111,16 @@ export default function HomePage() {
                   <p className="mt-1 text-base font-semibold text-foreground">{value}</p>
                 </div>
               ))}
+            </div>
+            </div>
+
+            <div className="flex flex-wrap gap-4 justify-center md:justify-end">
+              <img
+                src="/hero.jpg"
+                alt="Hero"
+                className="w-full max-w-[420px] rounded-lg shadow-lg"
+              />
+              {/* Additional hero images can be added here and will wrap naturally */}
             </div>
           </div>
         </div>
