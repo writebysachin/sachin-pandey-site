@@ -5,10 +5,6 @@ import { Button } from "@/components/ui/button";
 
 const navigation = [
   {
-    name: "Case Studies",
-    href: "/case-studies",
-  },
-  {
     name: "Insights",
     href: "/insights",
   },
@@ -18,11 +14,7 @@ const navigation = [
   },
   {
     name: "Yoga Write Code",
-    href: "https://yogawritecode.com",
-  },
-  {
-    name: "About",
-    href: "/about",
+    href: "/yoga-write-code",
   },
 ];
 
@@ -44,7 +36,15 @@ export default function Navbar() {
               className="h-full w-full rounded-md object-cover"
             />
           </span>
-          <span className="text-base sm:text-lg">Sachin Pandey</span>
+          <span className="text-base sm:text-lg">
+            <Image
+              src="/wordmark.svg"
+              alt="Sachin Pandey"
+              width={122}
+              height={28}
+            />
+          </span>
+          <span className="sr-only">Sachin Pandey</span>
         </Link>
 
         {/* Navigation */}
@@ -60,11 +60,17 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
-        <Button size="lg" className="rounded-md">
-          Start a Conversation
-          <ArrowUpRight className="ml-2 h-4 w-4" />
-        </Button>
+          {/* CTA - Calendly Link */}
+        <a
+          href="https://calendly.com/sachinpandey0/seo-content-interview" // Replace with your Calendly
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button size="lg" className="rounded-md">
+            Start a Conversation
+            <ArrowUpRight className="ml-2 h-4 w-4" />
+          </Button>
+        </a>
       </div>
     </header>
   );

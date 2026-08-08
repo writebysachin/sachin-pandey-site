@@ -2,6 +2,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import { ArrowUpRight } from "lucide-react"; // Make sure this is imported at the top of your file
 import { Button } from "@/components/ui/button";
 
 // ============================================================================
@@ -183,38 +184,58 @@ function Section({
   );
 }
 
+
 // ============================================================================
 // SECTIONS
 // ============================================================================
 
 function Hero() {
   return (
-    <Section className="pt-32 pb-20">
-      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="max-w-5xl space-y-8">
+    <Section className="pt-32 pb-20 md:pb-32">
+      <motion.div 
+        variants={containerVariants} 
+        initial="hidden" 
+        animate="visible" 
+        className="max-w-4xl space-y-8"
+      >
         <motion.div variants={itemVariants}>
           <Badge>B2B Growth Systems</Badge>
         </motion.div>
         
-        <motion.h1 variants={itemVariants} className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-foreground">
-          Most B2B companies don&apos;t <br className="hidden md:block" />
-          have a marketing problem. <br className="hidden md:block" />
+        <motion.h1 
+          variants={itemVariants} 
+          // Smooth typography scaling: readable on mobile, tight and premium on desktop
+          className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] lg:leading-[0.95] tracking-tight text-foreground"
+        >
+          Most B2B companies don't <br className="hidden sm:block" />
+          have a marketing problem. <br className="hidden sm:block" />
           They have a <span className="text-primary">systems</span> problem.
         </motion.h1>
         
-        <motion.p variants={itemVariants} className="max-w-3xl text-xl leading-8 text-muted-foreground">
-          I help B2B companies build websites, SEO, and content systems that compound over time instead of restarting every quarter. Every engagement also helps shape Yoga Write Code — an AI platform I&apos;m building from real client problems.
+        <motion.p 
+          variants={itemVariants} 
+          className="max-w-2xl text-lg sm:text-xl leading-relaxed text-muted-foreground"
+        >
+          I help B2B companies build websites, SEO, and content systems that compound over time instead of restarting every quarter. Every engagement also helps shape Yoga Write Code — an AI platform I'm building from real client problems.
         </motion.p>
         
-        <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
-          <Button size="lg" className="rounded-xl bg-primary text-white hover:bg-primary/90 transition-colors">
-            View Work →
-          </Button>
-          <Button size="lg" variant="outline" className="rounded-xl border-border text-foreground hover:bg-surface hover:text-foreground transition-colors">
+        <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-2">
+          {/* Primary CTA: Smooth scrolls to the Work With Me section */}
+          <a 
+            href="/contact"
+            className="group inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/50"
+          >
             Work With Me
-          </Button>
-          <Button size="lg" variant="outline" className="rounded-xl border-border text-foreground hover:bg-surface hover:text-foreground transition-colors">
+            <ArrowUpRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+          
+          {/* Secondary CTA: Simple text link to keep focus on the primary action */}
+          <a 
+            href="/insights"
+            className="inline-flex items-center justify-center rounded-xl px-8 py-4 text-base font-semibold text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          >
             Read Insights
-          </Button>
+          </a>
         </motion.div>
       </motion.div>
     </Section>
@@ -229,7 +250,7 @@ function LogoCloud() {
           Trusted by forward-thinking B2B companies
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-          {["Company One", "Company Two", "Company Three", "Company Four", "Company Five"].map((company) => (
+          {["Law Firm", "VoIP", "Restaurants", "Computer Accessories", "Marketing Agency", "Internet Publisher"].map((company) => (
             <div key={company} className="text-lg font-semibold text-muted-foreground/60 transition-colors duration-300 hover:text-primary">
               {company}
             </div>
@@ -533,10 +554,10 @@ function CTA() {
         </SectionParagraph>
         <div className="pt-4">
           <a
-            href="mailto:sachin@yogawritecode.com"
+            href="mailto:write@sachinpandey.com.np"
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-primary/90 shadow-lg shadow-primary/20"
           >
-            <span>sachin@yogawritecode.com</span>
+            <span>Get Started</span>
             <span>→</span>
           </a>
         </div>
