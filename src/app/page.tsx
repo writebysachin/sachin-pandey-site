@@ -2,7 +2,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { ArrowUpRight } from "lucide-react"; // Make sure this is imported at the top of your file
+import { ArrowUpRight } from "lucide-react";
 
 // ============================================================================
 // TYPES
@@ -77,9 +77,9 @@ const caseStudies: CaseStudy[] = [
 ];
 
 const articles: Article[] = [
-  { category: "SEO SYSTEMS", title: "Why most B2B SEO fails before it starts", description: "SEO treated as a checklist produces checklist results.", date: "July 2025", readTime: "8 min", link: "#" },
-  { category: "MARKETING SYSTEMS", title: "What a marketing system actually looks like", description: "Not a tech stack. A system is a set of repeatable decisions.", date: "June 2025", readTime: "10 min", link: "#" },
-  { category: "BUILDING IN PUBLIC", title: "Building Yoga Write Code: Month 3", description: "What three months of consulting research taught me about content operations.", date: "May 2025", readTime: "6 min", link: "#" },
+  { category: "SEO SYSTEMS", title: "Why most B2B SEO fails before it starts", description: "SEO treated as a checklist produces checklist results.", date: "July 2025", readTime: "8 min", link: "/insights" },
+  { category: "MARKETING SYSTEMS", title: "What a marketing system actually looks like", description: "Not a tech stack. A system is a set of repeatable decisions.", date: "June 2025", readTime: "10 min", link: "/insights" },
+  { category: "BUILDING IN PUBLIC", title: "Building Yoga Write Code: Month 3", description: "What three months of consulting research taught me about content operations.", date: "May 2025", readTime: "6 min", link: "/insights" },
 ];
 
 const processSteps: ProcessStep[] = [
@@ -183,61 +183,83 @@ function Section({
   );
 }
 
-
 // ============================================================================
 // SECTIONS
 // ============================================================================
 
 function Hero() {
   return (
-    <Section className="pt-32 pb-20 md:pb-32">
-      <motion.div 
-        variants={containerVariants} 
-        initial="hidden" 
-        animate="visible" 
-        className="max-w-4xl space-y-8"
-      >
-        <motion.div variants={itemVariants}>
-          <Badge>B2B Growth Systems</Badge>
-        </motion.div>
-        
-        <motion.h1 
-          variants={itemVariants} 
-          // Smooth typography scaling: readable on mobile, tight and premium on desktop
-          className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] lg:leading-[0.95] tracking-tight text-foreground"
-        >
-          Most B2B companies don&apos;t <br className="hidden sm:block" />
-          have a marketing problem. <br className="hidden sm:block" />
-          They have a <span className="text-primary">systems</span> problem.
-        </motion.h1>
-        
-        <motion.p 
-          variants={itemVariants} 
-          className="max-w-2xl text-lg sm:text-xl leading-relaxed text-muted-foreground"
-        >
-          I help B2B companies build websites, SEO, and content systems that compound over time instead of restarting every quarter. Every engagement also helps shape Yoga Write Code — an AI platform I&apos;m building from real client problems.
-        </motion.p>
-        
-        <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-2">
-          {/* Primary CTA: Smooth scrolls to the Work With Me section */}
-          <a 
-            href="/contact"
-            className="group inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/50"
-          >
-            Work With Me
-            <ArrowUpRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+    <section className="relative pt-32 pb-20 md:pb-32 overflow-hidden bg-background">
+      
+      {/* 1. STATIC GRADIENT BACKGROUND (No Motion = No Flickering) */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        {/* Blob 1: Main Stripe Gradient */}
+        <div
+          className="absolute top-0 right-0 w-200 h-200 opacity-20"
+          style={{
+            background: 'linear-gradient(115deg, #4F46E5 0%, #7C3AED 15%, #EC4899 30%, #F97316 45%, #FBBF24 60%, #EC4899 75%, #8B5CF6 90%)',
+            transform: 'rotate(12deg) translateX(20%)',
+            filter: 'blur(80px)',
+          }}
+        />
+        {/* Blob 2: Secondary Gradient */}
+        <div
+          className="absolute -top-40 -right-40 w-150 h-150 opacity-15"
+          style={{
+            background: 'linear-gradient(135deg, #10B981 0%, #3B82F6 25%, #8B5CF6 50%, #EC4899 75%, #F59E0B 100%)',
+            transform: 'rotate(-8deg)',
+            filter: 'blur(100px)',
+          }}
+        />
+        {/* Blob 3: Tertiary Gradient */}
+        <div
+          className="absolute top-1/2 right-0 w-175 h-175 opacity-15"
+          style={{
+            background: 'linear-gradient(105deg, #6366F1 0%, #A855F7 20%, #F472B6 40%, #FB923C 60%, #60A5FA 80%, #34D399 100%)',
+            transform: 'rotate(15deg) translateY(-20%)',
+            filter: 'blur(90px)',
+          }}
+        />
+      </div>
+
+      {/* 2. STATIC CONTENT (No Motion) */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 relative z-10">
+        <div className="max-w-4xl space-y-8">
           
-          {/* Secondary CTA: Simple text link to keep focus on the primary action */}
-          <a 
-            href="/insights"
-            className="inline-flex items-center justify-center rounded-xl px-8 py-4 text-base font-semibold text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-          >
-            Read Insights
-          </a>
-        </motion.div>
-      </motion.div>
-    </Section>
+          <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-primary">
+            B2B Growth Systems
+          </span>
+
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] lg:leading-[0.95] tracking-tight text-foreground">
+            Most B2B companies don&apos;t <br className="hidden md:block" />
+            have a marketing problem. <br className="hidden md:block" />
+            They have a <span className="text-primary">systems</span> problem.
+          </h1>
+
+          <p className="max-w-2xl text-lg sm:text-xl leading-relaxed text-muted-foreground">
+            I help B2B companies build websites, SEO, and content systems that compound over time instead of restarting every quarter. Every engagement also helps shape Yoga Write Code — an AI platform I&apos;m building from real client problems.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <a
+              href="/contact"
+              className="group inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/50"
+            >
+              Work With Me
+              <ArrowUpRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+
+            <a
+              href="/insights"
+              className="inline-flex items-center justify-center rounded-xl px-8 py-4 text-base font-semibold text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              Read Insights
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -249,7 +271,7 @@ function LogoCloud() {
           Trusted by forward-thinking B2B companies
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-          {["Law Firm", "VoIP", "Restaurants", "Computer Accessories", "Marketing Agency", "Internet Publisher"].map((company) => (
+          {["Law Firm", "VoIP", "Restaurants", "Computer Accessories", "Marketing Agency"].map((company) => (
             <div key={company} className="text-lg font-semibold text-muted-foreground/60 transition-colors duration-300 hover:text-primary">
               {company}
             </div>

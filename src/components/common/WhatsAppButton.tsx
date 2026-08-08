@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Replace with your actual WhatsApp number (Country code + number, no '+' or spaces)
-const WHATSAPP_NUMBER = "919876543210"; 
+const WHATSAPP_NUMBER = "9779864457211"; 
 const DEFAULT_MESSAGE = "Hi Sachin, I'd like to start a conversation about marketing systems.";
 
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;
