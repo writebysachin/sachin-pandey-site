@@ -16,7 +16,7 @@ export default function Footer() {
         {/* Right Side: Social Links */}
         <div className="flex items-center gap-5">
           <a 
-            href="https://www.linkedin.com/in/your-linkedin-username" 
+            href="https://www.linkedin.com/in/writebysachin" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-primary"
@@ -31,7 +31,7 @@ export default function Footer() {
           </a>
           
           <a 
-            href="https://www.instagram.com/your-instagram-username" 
+            href="https://www.instagram.com/writebysachin" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-primary"
