@@ -21,12 +21,15 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Sachin Pandey | B2B Marketing Systems",
+  title: "Sachin Pandey | Marketing Systems Consultant",
   description: "I help B2B companies build websites, SEO, and content systems that compound over time instead of restarting every quarter.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
     apple: "/favicon.svg",
+  },
+  other: {
+    "p:domain_verify": "fc244fb353c54095039e817330fc1c50", // <-- Pinterest Verification
   },
 };
 

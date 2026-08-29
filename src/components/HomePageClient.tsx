@@ -209,9 +209,9 @@ function Hero() {
               Work With Me
               <ArrowUpRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
-            <Link href="/insights" className="inline-flex items-center justify-center rounded-xl px-8 py-4 text-base font-semibold text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
+            <a href="/insights" className="inline-flex items-center justify-center rounded-xl px-8 py-4 text-base font-semibold text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
               Read Insights
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -383,6 +383,10 @@ function Testimonials() {
   );
 }
 
+// ============================================================================
+// FIXED INSIGHTS SECTION (Mobile Cards + Desktop Dividers)
+// ============================================================================
+
 function Insights({ posts }: { posts: BlogPost[] }) {
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("en-US", { month: "long", year: "numeric" });
@@ -396,7 +400,8 @@ function Insights({ posts }: { posts: BlogPost[] }) {
           <SectionHeading>How I think about these problems</SectionHeading>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border border-y border-border">
+        {/* Mobile: Gap spacing for cards. Desktop: Clean dividers. */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x md:divide-border">
           {posts.map((post, index) => (
             <motion.div
               key={post.slug}
@@ -405,9 +410,10 @@ function Insights({ posts }: { posts: BlogPost[] }) {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group flex flex-col p-8 first:pl-0 last:pr-0 md:first:pl-8 md:last:pr-8 transition-colors hover:bg-background"
+              className="group h-full"
             >
-              <Link href={`/insights/${post.slug}`} className="flex flex-col h-full">
+              <Link href={`/insights/${post.slug}`} className="flex flex-col h-full rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 md:rounded-none md:border-0 md:bg-transparent md:p-8 md:hover:shadow-none md:hover:border-transparent">
+                
                 {/* Featured Image */}
                 {post.featuredImage && (
                   <div className="relative h-48 w-full mb-6 overflow-hidden rounded-xl border border-border bg-muted">
@@ -416,7 +422,7 @@ function Insights({ posts }: { posts: BlogPost[] }) {
                       alt={post.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
                 )}
@@ -427,17 +433,18 @@ function Insights({ posts }: { posts: BlogPost[] }) {
                       {post.category}
                     </span>
                     <span className="text-primary transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                      
+                      ↗
                     </span>
                   </div>
-                  <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-tight">
                     {post.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
                     {post.excerpt}
                   </p>
                 </div>
-                <div className="pt-6 text-xs text-muted-foreground font-medium">
+                
+                <div className="pt-6 mt-6 border-t border-border text-xs text-muted-foreground font-medium">
                   {formatDate(post.date)} · {post.readTime}
                 </div>
               </Link>
@@ -509,7 +516,6 @@ export default function HomePageClient({ insightsPosts }: { insightsPosts: BlogP
         <Process />
         <Testimonials />
         
-        {/* Dynamic Insights Section with Images */}
         <Insights posts={insightsPosts} />
         
         <FAQ />
