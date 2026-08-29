@@ -4,7 +4,7 @@ excerpt: "I used to think of search as a simple process. You have a question. Yo
 date: "2026-08-25"
 readTime: "8 min read"
 category: "Search Behavior"
-featuredImage: "/blog/people-dont-search.webp"
+featuredImage: "/blog/people-dont-search-in-one-place.webp"
 tags: ["Search Behavior", "AI Search", "Content Strategy", "Customer Journey"]
 ---
 
