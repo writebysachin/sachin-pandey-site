@@ -2,13 +2,10 @@ import { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Use your actual domain, or a fallback for local testing
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sachinpandey.com.np';
 
-  // Get all your markdown posts dynamically
   const posts = getAllPosts();
 
-  // Create a sitemap entry for each blog post
   const postUrls = posts.map((post) => ({
     url: `${baseUrl}/insights/${post.slug}`,
     lastModified: new Date(post.date),
@@ -41,7 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.5,
     },
-    // Add all the dynamic blog post URLs here
     ...postUrls,
   ];
 }
