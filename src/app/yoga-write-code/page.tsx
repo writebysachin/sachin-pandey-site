@@ -22,7 +22,7 @@ export default function YogaWriteCodePage() {
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               An AI-powered platform that automates your content operations. 
-              Built from real client problems I've solved in consulting.
+              Built from real client problems I&apos;ve solved in consulting.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -32,7 +32,7 @@ export default function YogaWriteCodePage() {
                 Learn More →
               </a>
               <a
-                href="/#work-with-me"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-xl border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-surface"
               >
                 Get Early Access
@@ -47,7 +47,7 @@ export default function YogaWriteCodePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="max-w-3xl mb-12">
             <h2 className="font-heading text-3xl sm:text-4xl text-foreground mb-4">
-              What's Inside
+              What&apos;s Inside
             </h2>
             <p className="text-lg text-muted-foreground">
               Everything you need to scale your content operations.
@@ -107,7 +107,7 @@ export default function YogaWriteCodePage() {
             Join the waitlist and be the first to know when we launch.
           </p>
           <a
-            href="/#work-with-me"
+            href="/contact"
             className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-primary-hover"
           >
             Join Waitlist →

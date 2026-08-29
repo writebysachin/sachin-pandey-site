@@ -41,6 +41,7 @@ export default function Navbar() {
               width={122}
               height={28}
               className="h-6 w-auto"
+              priority // <-- THIS FIXES THE LCP WARNING
             />
           </span>
           <span className="sr-only">Sachin Pandey</span>
@@ -73,7 +74,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Menu Toggle Button */}
+        {/* Mobile Menu Toggle */}
         <button
           className="lg:hidden rounded-md p-2 text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -87,7 +88,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="border-t border-border bg-background lg:hidden">
           <div className="mx-auto max-w-7xl px-6 py-6 lg:px-10">
@@ -103,7 +104,6 @@ export default function Navbar() {
                 </Link>
               ))}
               
-              {/* Mobile CTA */}
               <div className="pt-2">
                 <a
                   href="https://calendly.com/sachinpandey0/seo-content-interview"

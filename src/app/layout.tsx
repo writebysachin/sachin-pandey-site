@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Playfair_Display } from "next/font/google";
+import { Geist } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import { cn } from "@/lib/utils";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
-
 import "./globals.css";
 
-// Initialize fonts
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -38,12 +38,15 @@ export default function RootLayout({
   return (
     <html 
       lang="en" 
-      className={`scroll-smooth ${geist.variable} ${playfair.variable}`}
+      className={cn("scroll-smooth", geist.variable, playfair.variable)}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <body
-        className={`flex min-h-screen flex-col bg-background text-foreground antialiased ${geist.variable} ${playfair.variable}`}
-      >
+      <body className={cn(
+        "flex min-h-screen flex-col bg-background text-foreground antialiased",
+        geist.variable,
+        playfair.variable
+      )}>
         <Navbar />
         
         <main className="flex-1">
