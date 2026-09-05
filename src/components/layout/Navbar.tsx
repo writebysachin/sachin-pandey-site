@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const navigation = [
   { name: "Insights", href: "/insights" },
+  { name: "Tools", href: "/tools" }, // <-- NEW TOOLS LINK ADDED HERE
   { name: "Work With Me", href: "/contact" },
   { name: "Yoga Write Code", href: "/yoga-write-code" },
 ];
@@ -41,7 +42,7 @@ export default function Navbar() {
               width={122}
               height={28}
               className="h-6 w-auto"
-              priority // <-- THIS FIXES THE LCP WARNING
+              priority // <-- Keeps the LCP performance fix
             />
           </span>
           <span className="sr-only">Sachin Pandey</span>
