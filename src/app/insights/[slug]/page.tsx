@@ -47,7 +47,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             </span>
           </div>
 
-          <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-foreground mb-6 max-w-4xl">
+          <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl leading-tight text-foreground mb-6 max-w-4xl">
             {post.title}
           </h1>
 
@@ -60,7 +60,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Featured Image - Full Width */}
+        {/* Featured Image */}
         {post.featuredImage && (
           <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-8">
             <div className="relative aspect-[21/9] w-full overflow-hidden rounded-xl border border-border shadow-md">
@@ -76,26 +76,26 @@ export default async function BlogPostPage({ params }: PageProps) {
         )}
       </section>
 
-      {/* Main Content - WIDER LAYOUT */}
+      {/* Main Content */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           
-          {/* Article Content - Wider */}
+          {/* Article Content - Normal Font Weights */}
           <div className="
             space-y-6
-            [&>p]:text-lg [&>p]:leading-relaxed [&>p]:text-muted-foreground [&>p]:mb-6
-            [&>h2]:font-heading [&>h2]:text-3xl [&>h2]:md:text-4xl [&>h2]:font-bold [&>h2]:text-foreground [&>h2]:mt-12 [&>h2]:mb-6 [&>h2]:leading-tight
-            [&>h3]:font-heading [&>h3]:text-2xl [&>h3]:md:text-3xl [&>h3]:font-semibold [&>h3]:text-foreground [&>h3]:mt-8 [&>h3]:mb-4 [&>h3]:leading-snug
-            [&>h4]:text-xl [&>h4]:font-semibold [&>h4]:text-foreground [&>h4]:mt-6 [&>h4]:mb-3
-            [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-3 [&>ul]:mb-6 [&>ul]:text-muted-foreground [&>ul]:text-lg
-            [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:space-y-3 [&>ol]:mb-6 [&>ol]:text-muted-foreground [&>ol]:text-lg
-            [&>li]:leading-relaxed
-            [&>blockquote]:border-l-4 [&>blockquote]:border-primary [&>blockquote]:pl-6 [&>blockquote]:py-3 [&>blockquote]:my-10 [&>blockquote]:italic [&>blockquote]:text-xl [&>blockquote]:text-foreground [&>blockquote]:bg-surface/50 [&>blockquote]:rounded-r-lg
+            [&>p]:text-lg [&>p]:leading-relaxed [&>p]:text-foreground [&>p]:mb-6 [&>p]:font-normal
+            [&>h2]:font-heading [&>h2]:text-3xl [&>h2]:md:text-4xl [&>h2]:font-medium [&>h2]:text-foreground [&>h2]:mt-12 [&>h2]:mb-6 [&>h2]:leading-tight
+            [&>h3]:font-heading [&>h3]:text-2xl [&>h3]:md:text-3xl [&>h3]:font-medium [&>h3]:text-foreground [&>h3]:mt-8 [&>h3]:mb-4 [&>h3]:leading-snug
+            [&>h4]:text-xl [&>h4]:font-medium [&>h4]:text-foreground [&>h4]:mt-6 [&>h4]:mb-3
+            [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-3 [&>ul]:mb-6 [&>ul]:text-foreground [&>ul]:text-lg [&>ul]:font-normal
+            [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:space-y-3 [&>ol]:mb-6 [&>ol]:text-foreground [&>ol]:text-lg [&>ol]:font-normal
+            [&>li]:leading-relaxed [&>li]:font-normal
+            [&>blockquote]:border-l-4 [&>blockquote]:border-primary [&>blockquote]:pl-6 [&>blockquote]:py-3 [&>blockquote]:my-10 [&>blockquote]:italic [&>blockquote]:text-xl [&>blockquote]:text-foreground [&>blockquote]:bg-surface/50 [&>blockquote]:rounded-r-lg [&>blockquote]:font-normal
             [&>strong]:font-semibold [&>strong]:text-foreground
-            [&>a]:text-primary [&>a]:underline [&>a]:underline-offset-2 [&>a]:hover:text-primary/80
-            [&>code]:bg-surface [&>code]:px-2 [&>code]:py-1 [&>code]:rounded [&>code]:text-sm [&>code]:text-primary [&>code]:font-mono
-            [&>pre]:bg-surface [&>pre]:p-6 [&>pre]:rounded-xl [&>pre]:border [&>pre]:border-border [&>pre]:mb-6 [&>pre]:overflow-x-auto
-            [&>pre>code]:bg-transparent [&>pre>code]:p-0 [&>pre>code]:text-sm
+            [&>a]:text-primary [&>a]:underline [&>a]:underline-offset-2 [&>a]:hover:text-primary/80 [&>a]:font-normal
+            [&>code]:bg-surface [&>code]:px-2 [&>code]:py-1 [&>code]:rounded [&>code]:text-sm [&>code]:text-primary [&>code]:font-mono [&>code]:font-normal
+            [&>pre]:bg-surface [&>pre]:p-6 [&>pre]:rounded-xl [&>pre]:border [&>pre]:border-border [&>pre]:mb-6 [&>pre]:overflow-x-auto [&>pre]:font-normal
+            [&>pre>code]:bg-transparent [&>pre>code]:p-0 [&>pre>code]:text-sm [&>pre>code]:font-normal
           ">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {post.content}
@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 {post.tags.map((tag) => (
                   <span 
                     key={tag} 
-                    className="inline-flex items-center rounded-full bg-surface px-4 py-2 text-sm font-medium text-muted-foreground border border-border hover:border-primary/50 hover:text-primary transition-colors"
+                    className="inline-flex items-center rounded-full bg-surface px-4 py-2 text-sm font-normal text-foreground border border-border hover:border-primary/50 hover:text-primary transition-colors"
                   >
                     {tag}
                   </span>
@@ -118,24 +118,24 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
           )}
 
-          {/* CTA Section - Wider */}
+          {/* CTA Section */}
           <div className="mt-16 rounded-xl border border-border bg-surface/50 p-8 md:p-12 text-center">
-            <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-3">
+            <h3 className="font-heading text-2xl md:text-3xl font-medium text-foreground mb-3">
               Need help with your marketing systems?
             </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto text-base md:text-lg">
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto text-base md:text-lg font-normal">
               I help B2B companies build websites, SEO, and content systems that compound over time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-base font-normal text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
               >
                 Work With Me
               </Link>
               <Link 
                 href="/tools"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-8 py-3.5 text-base font-semibold text-foreground transition-all hover:bg-surface hover:border-primary/30"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-8 py-3.5 text-base font-normal text-foreground transition-all hover:bg-surface hover:border-primary/30"
               >
                 Try Free Tools
               </Link>
