@@ -3,8 +3,16 @@ import Image from "next/image";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata = {
-  title: "Insights | Sachin Pandey",
-  description: "Thoughts on B2B marketing systems, SEO, AI search, and content operations.",
+  title: "Insights",
+  description:
+    "Thoughts on B2B marketing systems, SEO, AI search, GEO, AEO, and content operations — written from real client work.",
+  alternates: { canonical: "/insights" },
+  openGraph: {
+    title: "Insights | B2B Marketing Systems, AI SEO & GEO",
+    description:
+      "Thoughts on B2B marketing systems, SEO, AI search, GEO, AEO, and content operations.",
+    url: "/insights",
+  },
 };
 
 export default function InsightsPage() {

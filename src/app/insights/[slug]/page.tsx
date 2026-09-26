@@ -21,8 +21,27 @@ export async function generateMetadata({ params }: PageProps) {
   if (!post) return { title: "Post Not Found" };
 
   return {
-    title: `${post.title} | Sachin Pandey`,
+    title: post.title,
     description: post.excerpt,
+    keywords: post.tags,
+    authors: [{ name: "Sachin Pandey" }],
+    alternates: { canonical: `/insights/${post.slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `/insights/${post.slug}`,
+      publishedTime: post.date,
+      authors: ["Sachin Pandey"],
+      tags: post.tags,
+      ...(post.featuredImage ? { images: [{ url: post.featuredImage, alt: post.title }] } : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      ...(post.featuredImage ? { images: [post.featuredImage] } : {}),
+    },
   };
 }
 

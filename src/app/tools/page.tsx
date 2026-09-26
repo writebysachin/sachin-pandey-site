@@ -2,8 +2,16 @@ import Link from "next/link";
 import { ArrowRight, Search, BarChart3, FileText } from "lucide-react";
 
 export const metadata = {
-  title: "Free SEO & Content Tools | Sachin Pandey",
-  description: "Genuinely useful free tools to help you diagnose and fix your marketing systems. Get actionable SEO and content insights delivered to your inbox.",
+  title: "Free SEO & Content Tools",
+  description:
+    "Genuinely useful free tools to help you diagnose and fix your marketing systems. Get actionable SEO and content insights delivered to your inbox.",
+  alternates: { canonical: "/tools" },
+  openGraph: {
+    title: "Free SEO & Content Tools",
+    description:
+      "Diagnose and fix your marketing systems with free, genuinely useful SEO and content tools.",
+    url: "/tools",
+  },
 };
 
 const tools = [
