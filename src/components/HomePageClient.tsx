@@ -9,13 +9,12 @@ import {
   Briefcase,
   Building2,
   Cpu,
-  Factory,
   FileText,
   Globe,
+  Handshake,
   Home,
-  Landmark,
+  Megaphone,
   MonitorSmartphone,
-  Scale,
   Server,
   Sparkles,
   Users,
@@ -98,14 +97,13 @@ const serviceTags: MarqueeItem[] = [
 
 // Who it's for — the verticals strip
 const verticalTags: MarqueeItem[] = [
-  { label: "B2B SaaS", icon: Building2 },
-  { label: "Law Firms", icon: Scale },
-  { label: "Legal Services", icon: Landmark },
-  { label: "Home Services", icon: Home },
-  { label: "Manufacturing & Distribution", icon: Factory },
+  { label: "Marketing Agencies", icon: Megaphone, hint: "white-label delivery" },
+  { label: "B2B SaaS Companies", icon: Building2 },
+  { label: "SaaS Marketing Teams", icon: Users, hint: "in-house growth" },
   { label: "B2B Technology", icon: Cpu },
   { label: "Professional Services", icon: Briefcase },
-  { label: "B2B Teams, 10\u201350 People", icon: Users },
+  { label: "Home Services", icon: Home },
+  { label: "B2B Teams, 10\u201350 People", icon: Handshake },
 ];
 
 const caseStudies: CaseStudy[] = [
