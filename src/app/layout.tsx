@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
+import ClarityScript from "@/components/common/ClarityScript";
 import "./globals.css";
 
 const geist = Geist({
@@ -112,6 +113,7 @@ export default function RootLayout({
         
         <Footer />
         <WhatsAppButton />
+        <ClarityScript />
       </body>
     </html>
   );
