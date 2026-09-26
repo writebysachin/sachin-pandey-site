@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import ArticleCTA from "@/components/common/ArticleCTA";
 import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -138,27 +139,11 @@ export default async function BlogPostPage({ params }: PageProps) {
           )}
 
           {/* CTA Section */}
-          <div className="mt-16 rounded-xl border border-border bg-surface/50 p-8 md:p-12 text-center">
-            <h3 className="font-heading text-2xl md:text-3xl font-medium text-foreground mb-3">
-              Need help with your marketing systems?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto text-base md:text-lg font-normal">
-              I help B2B companies build websites, SEO, and content systems that compound over time.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-base font-normal text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
-              >
-                Work With Me
-              </Link>
-              <Link 
-                href="/tools"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-8 py-3.5 text-base font-normal text-foreground transition-all hover:bg-surface hover:border-primary/30"
-              >
-                Try Free Tools
-              </Link>
-            </div>
+          <div className="mt-16">
+            <ArticleCTA
+              title="Liked this? Let's find out what's broken on your site."
+              description="Everything above came out of real client audits. Send me your URL and I'll tell you which of these problems you actually have — and which ones you don't."
+            />
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/lib/posts";
+import ArticleCTA from "@/components/common/ArticleCTA";
 
 export const metadata = {
   title: "Insights",
@@ -91,6 +92,13 @@ export default function InsightsPage() {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="pb-20 md:pb-32">
+        <div className="mx-auto max-w-4xl px-6 lg:px-10">
+          <ArticleCTA />
         </div>
       </section>
     </div>
