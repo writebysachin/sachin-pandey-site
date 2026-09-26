@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Search, BarChart3, FileText } from "lucide-react";
+import ArticleCTA from "@/components/common/ArticleCTA";
 
 export const metadata = {
   title: "Free SEO & Content Tools",
@@ -182,6 +183,19 @@ export default function ToolsPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 md:pb-32">
+        <div className="mx-auto max-w-4xl px-6 lg:px-10">
+          <ArticleCTA
+            badge="When the tools aren't enough"
+            title="The tools show you what's broken. I'll show you how to fix it."
+            description="Every fix costs more when you don't know which one matters first. Send me your audit results and I'll tell you what to do next — and what to leave alone."
+            secondaryHref="/insights"
+            secondaryLabel="Read Insights"
+          />
         </div>
       </section>
     </div>
