@@ -1,7 +1,26 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  BarChart3,
+  Bot,
+  BrainCircuit,
+  Briefcase,
+  Building2,
+  Cpu,
+  Factory,
+  FileText,
+  Globe,
+  Home,
+  Landmark,
+  MonitorSmartphone,
+  Scale,
+  Server,
+  Sparkles,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,6 +31,13 @@ import Image from "next/image";
 interface FeatureItem {
   title: string;
   description: string;
+}
+
+interface MarqueeItem {
+  label: string;
+  icon: LucideIcon;
+  /** Short qualifier shown next to the label on wide screens */
+  hint?: string;
 }
 
 interface CaseStudy {
@@ -55,6 +81,31 @@ const features: FeatureItem[] = [
   { title: "SEO Systems", description: "Predictable organic acquisition instead of quarterly keyword sprints that reset." },
   { title: "Content Operations", description: "Repeatable production workflows. Content that builds on itself instead of starting over." },
   { title: "AI Workflows", description: "Automation that removes bottlenecks. Not tools for their own sake." },
+];
+
+// What I build — the services strip
+const serviceTags: MarqueeItem[] = [
+  { label: "AI SEO", icon: Sparkles, hint: "Search that compounds" },
+  { label: "AI Search Visibility", icon: BrainCircuit, hint: "ChatGPT · Perplexity · AI Overviews" },
+  { label: "GEO", icon: Globe, hint: "Generative Engine Optimization" },
+  { label: "AEO", icon: Bot, hint: "Answer Engine Optimization" },
+  { label: "Content Systems", icon: FileText, hint: "Topic clusters that compound" },
+  { label: "Technical SEO", icon: Server, hint: "Crawl, schema, Core Web Vitals" },
+  { label: "Websites", icon: MonitorSmartphone, hint: "B2B sites that convert" },
+  { label: "Analytics & Reporting", icon: BarChart3, hint: "Attribution you can act on" },
+  { label: "AI Automation", icon: Cpu, hint: "Workflows that remove bottlenecks" },
+];
+
+// Who it's for — the verticals strip
+const verticalTags: MarqueeItem[] = [
+  { label: "B2B SaaS", icon: Building2 },
+  { label: "Law Firms", icon: Scale },
+  { label: "Legal Services", icon: Landmark },
+  { label: "Home Services", icon: Home },
+  { label: "Manufacturing & Distribution", icon: Factory },
+  { label: "B2B Technology", icon: Cpu },
+  { label: "Professional Services", icon: Briefcase },
+  { label: "B2B Teams, 10\u201350 People", icon: Users },
 ];
 
 const caseStudies: CaseStudy[] = [
@@ -219,20 +270,96 @@ function Hero() {
   );
 }
 
-function LogoCloud() {
+function MarqueeTag({ item, tone }: { item: MarqueeItem; tone: "primary" | "neutral" }) {
+  const Icon = item.icon;
+  const isPrimary = tone === "primary";
+
   return (
-    <Section variant="surface" className="py-16">
-      <div className="space-y-8">
-        <p className="text-center text-sm font-semibold uppercase tracking-widest text-muted-foreground">
-          Trusted by forward-thinking B2B companies
-        </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-          {["Law Firm", "VoIP", "Restaurants", "Computer Accessories", "Marketing Agency"].map((company) => (
-            <div key={company} className="text-lg font-semibold text-muted-foreground/60 transition-colors duration-300 hover:text-primary">
-              {company}
-            </div>
+    <span
+      className={`group/tag inline-flex shrink-0 items-center gap-2 rounded-full border py-2 pl-2 pr-4 text-sm font-semibold whitespace-nowrap transition-colors duration-300 ${
+        isPrimary
+          ? "border-primary/20 bg-primary/[0.04] text-foreground hover:border-primary/40 hover:bg-primary/[0.08]"
+          : "border-border bg-card text-foreground hover:border-primary/30 hover:bg-surface"
+      }`}
+    >
+      <span
+        className={`flex h-7 w-7 items-center justify-center rounded-full transition-colors duration-300 ${
+          isPrimary ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
+        }`}
+      >
+        <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+      </span>
+      {item.label}
+      {item.hint && (
+        <span className="hidden text-xs font-normal text-muted-foreground lg:inline">{item.hint}</span>
+      )}
+    </span>
+  );
+}
+
+function MarqueeRow({
+  items,
+  reverse = false,
+  duration = 45,
+  tone,
+  label,
+}: {
+  items: MarqueeItem[];
+  reverse?: boolean;
+  duration?: number;
+  tone: "primary" | "neutral";
+  label: string;
+}) {
+  // Duplicated once so the -50% keyframe loops seamlessly
+  const loop = [...items, ...items];
+
+  return (
+    <div className="marquee-group relative">
+      <div className="mb-3 flex items-center gap-3 px-6 lg:px-10">
+        <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          {label}
+        </span>
+        <span className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
+      </div>
+
+      <div
+        className="marquee-group relative overflow-hidden"
+        // Fade the tags out at both edges instead of hard-cutting them
+        style={{
+          maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+        }}
+      >
+        <div
+          className={`marquee-track gap-3 ${reverse ? "marquee-reverse" : ""}`}
+          style={{ ["--marquee-duration" as string]: `${duration}s` }}
+        >
+          {loop.map((item, index) => (
+            <MarqueeTag key={`${item.label}-${index}`} item={item} tone={tone} />
           ))}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function CapabilityStrip() {
+  return (
+    <Section variant="surface" className="py-16 md:py-20">
+      <div className="space-y-10">
+        <div className="mx-auto max-w-3xl px-6 text-center lg:px-10">
+          <h2 className="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            Built for how search changed — <span className="text-primary">not how it used to work</span>
+          </h2>
+          <p className="mt-3 text-base text-muted-foreground">
+            Classic SEO got you found on ten blue links. These systems get you found in{" "}
+            <span className="font-semibold text-foreground">AI answers, assistants, and voice</span> — and
+            they keep working after the quarter ends.
+          </p>
+        </div>
+
+        <MarqueeRow items={serviceTags} label="What I build" tone="primary" duration={48} />
+        <MarqueeRow items={verticalTags} label="Who it's for" tone="neutral" reverse duration={40} />
       </div>
     </Section>
   );
@@ -509,7 +636,7 @@ export default function HomePageClient({ insightsPosts }: { insightsPosts: BlogP
     <main className="bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary">
       <motion.div initial="hidden" animate="visible" variants={containerVariants}>
         <Hero />
-        <LogoCloud />
+        <CapabilityStrip />
         <Problem />
         <Services />
         <SelectedWork />

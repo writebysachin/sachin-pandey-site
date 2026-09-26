@@ -130,6 +130,55 @@
   --sidebar-ring: #8B5CF6;
 }
 
+/* ==========================================================================
+   SCROLLING MARQUEE (capability strip on homepage)
+   ========================================================================== */
+
+@keyframes marquee-scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll-x var(--marquee-duration, 45s) linear infinite;
+  }
+
+  .marquee-reverse .marquee-track {
+    animation-direction: reverse;
+  }
+
+  .marquee-group:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  /* Accessible motion / no-JS fallback: everything stays readable and static */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
