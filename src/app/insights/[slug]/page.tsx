@@ -142,6 +142,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="mt-16">
             <ArticleCTA
               title="Liked this? Let's find out what's broken on your site."
+              titleAccent="what's broken on your site"
               description="Everything above came out of real client audits. Send me your URL and I'll tell you which of these problems you actually have — and which ones you don't."
             />
           </div>

@@ -13,6 +13,7 @@ export default function ArticleCTA({
   primaryLabel = "Work With Me",
   secondaryHref = "/tools",
   secondaryLabel = "Try Free Tools",
+  titleAccent,
 }: {
   badge?: string;
   title?: string;
@@ -21,7 +22,22 @@ export default function ArticleCTA({
   primaryLabel?: string;
   secondaryHref?: string;
   secondaryLabel?: string;
+  /** Substring of `title` to highlight, matching the hero's accent treatment */
+  titleAccent?: string;
 }) {
+  // Split the headline so the key phrase can carry the primary colour
+  const accentIndex = titleAccent ? title.indexOf(titleAccent) : -1;
+  const headline =
+    accentIndex === -1 ? (
+      title
+    ) : (
+      <>
+        {title.slice(0, accentIndex)}
+        <span className="text-primary">{titleAccent}</span>
+        {title.slice(accentIndex + titleAccent!.length)}
+      </>
+    );
+
   return (
     <div className="relative overflow-hidden rounded-2xl border border-border bg-surface/50 p-8 md:p-12 text-center">
       {/* Brand wash, echoing the capability strip on the homepage */}
@@ -47,7 +63,7 @@ export default function ArticleCTA({
         </span>
 
         <h2 className="mx-auto mt-6 max-w-2xl font-heading text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl md:text-4xl">
-          {title}
+          {headline}
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
