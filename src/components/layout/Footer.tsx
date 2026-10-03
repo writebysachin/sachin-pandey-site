@@ -19,7 +19,6 @@ export default function Footer() {
           <p className="font-medium text-foreground">
             © {new Date().getFullYear()} Sachin Pandey
           </p>
-          <p>Marketing Systems Consultant</p>
           <p>I help B2B companies build websites, SEO, and content systems that compound over time.</p>
         </div>
         
