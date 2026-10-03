@@ -15,7 +15,7 @@ export default function YogaWriteCodePage() {
             className="max-w-3xl"
           >
             <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-primary mb-6">
-              In Development
+              Now Live
             </span>
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight text-foreground mb-6">
               Yoga Write Code
@@ -32,10 +32,12 @@ export default function YogaWriteCodePage() {
                 Learn More →
               </a>
               <a
-                href="/contact"
+                href="https://yogawritecode.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-surface"
               >
-                Get Early Access
+                Go to YogaWriteCode.com
               </a>
             </div>
           </motion.div>
@@ -101,16 +103,18 @@ export default function YogaWriteCodePage() {
       <section className="py-20">
         <div className="mx-auto max-w-3xl px-6 lg:px-10 text-center">
           <h2 className="font-heading text-3xl sm:text-4xl text-foreground mb-4">
-            Interested in Early Access?
+            Yoga Write Code is Live
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Join the waitlist and be the first to know when we launch.
+            The platform is now available. Explore it and see how it can automate your content operations.
           </p>
           <a
-            href="/contact"
+            href="https://yogawritecode.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-primary-hover"
           >
-            Join Waitlist →
+            Learn More →
           </a>
         </div>
       </section>
