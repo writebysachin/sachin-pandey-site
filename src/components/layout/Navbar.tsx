@@ -7,6 +7,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navigation = [
+  { name: "About", href: "/about" },
   { name: "Insights", href: "/insights" },
   { name: "Tools", href: "/tools" }, // <-- NEW TOOLS LINK ADDED HERE
   { name: "Work With Me", href: "/contact" },
