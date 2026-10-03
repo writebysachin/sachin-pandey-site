@@ -561,7 +561,7 @@ function Insights({ posts }: { posts: BlogPost[] }) {
                       ↗
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-tight">
+                  <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-tight">
                     {post.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
