@@ -1,5 +1,14 @@
 // src/components/layout/Footer.tsx
 
+import Link from "next/link";
+
+const quickLinks = [
+  { name: "Insights", href: "/insights" },
+  { name: "Tools", href: "/tools" },
+  { name: "Work With Me", href: "/contact" },
+  { name: "Yoga Write Code", href: "/yoga-write-code" },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background py-8">
@@ -11,10 +20,37 @@ export default function Footer() {
             © {new Date().getFullYear()} Sachin Pandey
           </p>
           <p>Marketing Systems Consultant</p>
+          <p>I help B2B companies build websites, SEO, and content systems that compound over time.</p>
         </div>
         
+        {/* Middle: Quick Links */}
+        <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2" aria-label="Footer">
+          {quickLinks.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
         {/* Right Side: Social Links */}
         <div className="flex items-center gap-5">
+          <a 
+            href="https://x.com/writebysachin" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-muted-foreground transition-colors hover:text-primary"
+            aria-label="Visit my X profile"
+          >
+            {/* X (Twitter) Inline SVG */}
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 2.126H5.117z"/>
+            </svg>
+          </a>
+
           <a 
             href="https://www.linkedin.com/in/writebysachin" 
             target="_blank" 
