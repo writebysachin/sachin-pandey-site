@@ -14,15 +14,19 @@ export default function YogaWriteCodePage() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-primary mb-6">
-              Now Live
-            </span>
+            <a
+              href="https://yogawritecode.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-primary mb-6 transition-colors hover:bg-primary/20"
+            >
+              Now Live — yogawritecode.com ↗
+            </a>
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight text-foreground mb-6">
               Yoga Write Code
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              An AI-powered platform that automates your content operations. 
-              Built from real client problems I&apos;ve solved in consulting.
+              Yoga Write Code is live. In minutes, you can analyze your website, uncover content gaps, and get a clear, prioritized plan — powered by the same thinking I use with consulting clients.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
