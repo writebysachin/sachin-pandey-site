@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
 
@@ -8,12 +7,6 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
 import ClarityScript from "@/components/common/ClarityScript";
 import "./globals.css";
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -96,13 +89,12 @@ export default function RootLayout({
   return (
     <html 
       lang="en" 
-      className={cn("scroll-smooth", geist.variable, playfair.variable)}
+      className={cn("scroll-smooth", playfair.variable)}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <body className={cn(
         "flex min-h-screen flex-col bg-background text-foreground antialiased",
-        geist.variable,
         playfair.variable
       )}>
         <Navbar />
