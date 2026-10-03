@@ -47,40 +47,40 @@ export default function YogaWriteCodePage() {
       {/* Features Section */}
       <section id="features" className="py-20 bg-surface">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="max-w-3xl mb-12">
-            <h2 className="font-heading text-3xl sm:text-4xl text-foreground mb-4">
+          <div className="max-w-3xl mb-12 text-center mx-auto">
+            <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-primary mb-6">
               What&apos;s Inside
+            </span>
+            <h2 className="font-heading text-3xl sm:text-4xl text-foreground mb-4">
+              Everything you need. Nothing you don&apos;t.
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Everything you need to scale your content operations.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "AI Content Generation",
-                description: "Generate SEO-optimized content that matches your brand voice."
+                title: "Keyword opportunities",
+                description: "Prioritized topics scored for business relevance, intent, and feasibility."
               },
               {
-                title: "Automated SEO",
-                description: "Automatic keyword optimization and topic clustering."
+                title: "Visual topic clusters",
+                description: "Pillar and supporting topics with internal linking built into the plan."
               },
               {
-                title: "Content Calendar",
-                description: "Intelligent scheduling and workflow management."
+                title: "SEO briefs",
+                description: "Headings, entities, questions, and competitor insights generated together."
               },
               {
-                title: "Performance Analytics",
-                description: "Track ROI and content performance in real-time."
+                title: "Article outlines",
+                description: "A clean H1/H2/H3 structure that is ready to draft without cleanup."
               },
               {
-                title: "Team Collaboration",
-                description: "Work together seamlessly with your team."
+                title: "Competitor gaps",
+                description: "Spot the topics your competitors cover and your audience is searching for."
               },
               {
-                title: "Publishing Automation",
-                description: "Schedule and publish across multiple platforms."
+                title: "Founder-friendly",
+                description: "Plain language and a guided workflow, with no SEO jargon required."
               }
             ].map((feature, index) => (
               <motion.div
@@ -91,6 +91,7 @@ export default function YogaWriteCodePage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-2xl border border-border bg-background p-6 hover:border-primary/50 transition-colors"
               >
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 text-green-700 mb-4">✓</div>
                 <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">{feature.description}</p>
               </motion.div>
