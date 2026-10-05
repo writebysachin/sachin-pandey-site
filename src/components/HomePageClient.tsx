@@ -274,7 +274,7 @@ function MarqueeTag({ item, tone }: { item: MarqueeItem; tone: "primary" | "neut
 
   return (
     <span
-      className={`group/tag inline-flex shrink-0 items-center gap-2 rounded-full border py-2 pl-2 pr-4 text-sm font-semibold whitespace-nowrap transition-colors duration-300 ${
+      className={`group/tag inline-flex shrink-0 items-center gap-2 rounded-full border py-2 pl-2 pr-4 text-base font-semibold whitespace-nowrap transition-colors duration-300 ${
         isPrimary
           ? "border-primary/20 bg-primary/[0.04] text-foreground hover:border-primary/40 hover:bg-primary/[0.08]"
           : "border-border bg-card text-foreground hover:border-primary/30 hover:bg-surface"
@@ -381,11 +381,11 @@ function Problem() {
             <motion.div key={index} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="group space-y-3 p-6 rounded-2xl border border-border bg-card transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
               <div className="flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
-                  <span className="text-sm font-bold">✦</span>
+                  <span className="text-base font-bold">✦</span>
                 </div>
                 <h3 className="text-base font-semibold text-foreground">{feature.title}</h3>
               </div>
-              <p className="text-sm leading-relaxed text-muted-foreground pl-11">{feature.description}</p>
+              <p className="text-base leading-relaxed text-muted-foreground pl-11">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -439,15 +439,15 @@ function SelectedWork() {
               </div>
               <div className="md:col-span-3 space-y-2">
                 <span className="text-[11px] font-semibold tracking-widest text-primary uppercase">Problem</span>
-                <p className="text-sm text-muted-foreground leading-relaxed">{study.problem}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{study.problem}</p>
               </div>
               <div className="md:col-span-3 space-y-2">
                 <span className="text-[11px] font-semibold tracking-widest text-primary uppercase">Approach</span>
-                <p className="text-sm text-muted-foreground leading-relaxed">{study.approach}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{study.approach}</p>
               </div>
               <div className="md:col-span-3 space-y-2">
                 <span className="text-[11px] font-semibold tracking-widest text-primary uppercase">Outcome</span>
-                <p className="text-sm text-foreground leading-relaxed font-medium">{study.outcome}</p>
+                <p className="text-base text-foreground leading-relaxed font-medium">{study.outcome}</p>
               </div>
             </motion.div>
           ))}
@@ -473,10 +473,10 @@ function Process() {
           <div className="divide-y divide-border border-y border-border">
             {processSteps.map((step, index) => (
               <motion.div key={step.number} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="py-8 grid grid-cols-12 gap-4 items-start">
-                <span className="col-span-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{step.number}</span>
+                <span className="col-span-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-base font-bold text-primary">{step.number}</span>
                 <div className="col-span-10 space-y-2">
                   <h3 className="text-base font-semibold text-foreground">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                  <p className="text-base text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -564,7 +564,7 @@ function Insights({ posts }: { posts: BlogPost[] }) {
                   <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-tight">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                  <p className="text-base text-muted-foreground leading-relaxed line-clamp-3">
                     {post.excerpt}
                   </p>
                 </div>
@@ -592,7 +592,7 @@ function FAQ() {
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <motion.div key={index} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="group space-y-3 rounded-2xl border border-transparent p-4 transition-all duration-300 hover:bg-surface hover:border-border">
-              <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-3">
                 <span className="text-primary text-lg">+</span>
                 {faq.question}
               </h3>
@@ -615,7 +615,7 @@ function CTA() {
           If you&apos;re working on a B2B marketing problem that feels like a systems problem — a website that doesn&apos;t convert, SEO that isn&apos;t compounding, content that restarts every quarter — I&apos;d like to hear about it. The first conversation is a diagnosis, not a pitch.
         </SectionParagraph>
         <div className="pt-4">
-          <a href="mailto:write@sachinpandey.com.np" className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-primary/90 shadow-lg shadow-primary/20">
+          <a href="mailto:write@sachinpandey.com.np" className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-primary/90 shadow-lg shadow-primary/20">
             <span>Get Started</span>
             <span>→</span>
           </a>

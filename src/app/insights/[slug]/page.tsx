@@ -57,7 +57,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Header Section */}
       <section className="relative py-16 md:py-24 border-b border-border bg-surface/30">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <Link href="/insights" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-6">
+          <Link href="/insights" className="inline-flex items-center gap-2 text-base text-muted-foreground hover:text-primary transition-colors mb-6">
             <ArrowLeft className="h-4 w-4" /> Back to Insights
           </Link>
 
@@ -71,7 +71,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {post.title}
           </h1>
 
-          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-4 text-base text-muted-foreground">
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
             </time>
@@ -113,9 +113,9 @@ export default async function BlogPostPage({ params }: PageProps) {
             [&>blockquote]:border-l-4 [&>blockquote]:border-primary [&>blockquote]:pl-6 [&>blockquote]:py-3 [&>blockquote]:my-10 [&>blockquote]:italic [&>blockquote]:text-xl [&>blockquote]:text-foreground [&>blockquote]:bg-surface/50 [&>blockquote]:rounded-r-lg [&>blockquote]:font-normal
             [&>strong]:font-semibold [&>strong]:text-foreground
             [&>a]:text-primary [&>a]:underline [&>a]:underline-offset-2 [&>a]:hover:text-primary/80 [&>a]:font-normal
-            [&>code]:bg-surface [&>code]:px-2 [&>code]:py-1 [&>code]:rounded [&>code]:text-sm [&>code]:text-primary [&>code]:font-mono [&>code]:font-normal
+            [&>code]:bg-surface [&>code]:px-2 [&>code]:py-1 [&>code]:rounded [&>code]:text-base [&>code]:text-primary [&>code]:font-mono [&>code]:font-normal
             [&>pre]:bg-surface [&>pre]:p-6 [&>pre]:rounded-xl [&>pre]:border [&>pre]:border-border [&>pre]:mb-6 [&>pre]:overflow-x-auto [&>pre]:font-normal
-            [&>pre>code]:bg-transparent [&>pre>code]:p-0 [&>pre>code]:text-sm [&>pre>code]:font-normal
+            [&>pre>code]:bg-transparent [&>pre>code]:p-0 [&>pre>code]:text-base [&>pre>code]:font-normal
           ">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {post.content}
@@ -129,7 +129,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 {post.tags.map((tag) => (
                   <span 
                     key={tag} 
-                    className="inline-flex items-center rounded-full bg-surface px-4 py-2 text-sm font-normal text-foreground border border-border hover:border-primary/50 hover:text-primary transition-colors"
+                    className="inline-flex items-center rounded-full bg-surface px-4 py-2 text-base font-normal text-foreground border border-border hover:border-primary/50 hover:text-primary transition-colors"
                   >
                     {tag}
                   </span>

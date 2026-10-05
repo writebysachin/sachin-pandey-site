@@ -77,7 +77,7 @@ export default function InsightsPage() {
                       </Link>
                     </h3>
                     
-                    <p className="text-sm text-muted-foreground mb-6 flex-1 line-clamp-3">
+                    <p className="text-base text-muted-foreground mb-6 flex-1 line-clamp-3">
                       {post.excerpt}
                     </p>
                     

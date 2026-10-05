@@ -37,7 +37,7 @@ export default function WhatsAppButton() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="rounded-xl border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-lg"
+                className="rounded-xl border border-border bg-card px-4 py-2 text-base font-medium text-foreground shadow-lg"
               >
                 Chat with me on WhatsApp
               </motion.div>

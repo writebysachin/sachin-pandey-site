@@ -13,7 +13,7 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background py-8">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground lg:flex-row lg:px-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-base text-muted-foreground lg:flex-row lg:px-10">
         
         {/* Left Side: Copyright & Title */}
         <div className="flex flex-col items-center gap-1 text-center lg:items-start lg:text-left">

@@ -31,7 +31,7 @@ export default function YogaWriteCodePage() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#features"
-                className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-hover"
+                className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-primary-hover"
               >
                 Learn More →
               </a>
@@ -39,7 +39,7 @@ export default function YogaWriteCodePage() {
                 href="https://yogawritecode.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-surface"
+                className="inline-flex items-center justify-center rounded-xl border border-border bg-background px-6 py-3.5 text-base font-semibold text-foreground transition-colors hover:bg-surface"
               >
                 Go to YogaWriteCode.com
               </a>
@@ -97,7 +97,7 @@ export default function YogaWriteCodePage() {
               >
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 text-green-700 mb-4">✓</div>
                 <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <p className="text-base text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -117,7 +117,7 @@ export default function YogaWriteCodePage() {
             href="https://yogawritecode.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-primary-hover"
+            className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-primary-hover"
           >
             Learn More →
           </a>

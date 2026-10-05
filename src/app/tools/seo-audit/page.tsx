@@ -30,7 +30,7 @@ export default function SEOAuditPage() {
         {/* Back Button */}
         <Link 
           href="/tools" 
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12"
+          className="inline-flex items-center gap-2 text-base text-muted-foreground hover:text-foreground transition-colors mb-12"
         >
           <ArrowLeft className="h-4 w-4" /> Back to Tools
         </Link>
@@ -66,7 +66,7 @@ export default function SEOAuditPage() {
               </p>
               <Link 
                 href="/insights" 
-                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                className="inline-flex items-center gap-2 text-base font-medium text-primary hover:underline"
               >
                 Read more insights while you wait →
               </Link>
@@ -75,7 +75,7 @@ export default function SEOAuditPage() {
             // FORM STATE
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <label htmlFor="website" className="text-sm font-medium text-foreground">
+                <label htmlFor="website" className="text-base font-medium text-foreground">
                   Your Website URL
                 </label>
                 <input
@@ -90,7 +90,7 @@ export default function SEOAuditPage() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-foreground">
+                <label htmlFor="email" className="text-base font-medium text-foreground">
                   Your Best Email Address
                 </label>
                 <input
@@ -130,7 +130,7 @@ export default function SEOAuditPage() {
 
         {/* Trust Signals */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-base text-muted-foreground">
             Trusted by founders and marketing teams who want real results, not automated fluff.
           </p>
         </div>

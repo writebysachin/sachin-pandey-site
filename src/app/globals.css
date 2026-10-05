@@ -207,12 +207,12 @@
   h2 { font-size: 24px; line-height: 32px; letter-spacing: -0.02em; }
   h3 { font-size: 20px; line-height: 28px; letter-spacing: 0; }
   h4 { font-size: 16px; line-height: 24px; letter-spacing: 0.01em; }
-  h5 { font-size: 14px; line-height: 24px; letter-spacing: 0.01em; }
+  h5 { font-size: 16px; line-height: 24px; letter-spacing: 0.01em; }
 
   .text-p-xl { font-size: 20px; line-height: 28px; letter-spacing: 0; font-weight: 400; }
   .text-p-l  { font-size: 16px; line-height: 24px; letter-spacing: 0.01em; font-weight: 400; }
   .text-p-m  { font-size: 16px; line-height: 26px; letter-spacing: 0; font-weight: 400; }
-  .text-p-s  { font-size: 14px; line-height: 20px; letter-spacing: 0; font-weight: 400; }
+  .text-p-s  { font-size: 16px; line-height: 22px; letter-spacing: 0; font-weight: 400; }
 
   p { font-size: 16px; line-height: 26px; letter-spacing: 0; }
 
@@ -227,7 +227,7 @@
     .text-p-xl { font-size: 28px; line-height: 36px; letter-spacing: -0.02em; }
     .text-p-l  { font-size: 18px; line-height: 24px; letter-spacing: 0.01em; }
     .text-p-m  { font-size: 16px; line-height: 26px; letter-spacing: -0.01em; }
-    .text-p-s  { font-size: 14px; line-height: 20px; }
+    .text-p-s  { font-size: 16px; line-height: 22px; }
 
     p { font-size: 16px; line-height: 26px; letter-spacing: -0.01em; }
   }

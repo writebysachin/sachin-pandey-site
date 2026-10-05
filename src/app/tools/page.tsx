@@ -108,7 +108,7 @@ export default function ToolsPage() {
                   {tool.title}
                 </h2>
                 
-                <p className="text-sm font-medium text-primary mb-4">
+                <p className="text-base font-medium text-primary mb-4">
                   {tool.audience}
                 </p>
 
@@ -118,7 +118,7 @@ export default function ToolsPage() {
 
                 <ul className="space-y-3 mb-8">
                   {tool.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <li key={index} className="flex items-start gap-3 text-base text-muted-foreground">
                       <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                         <svg className="h-2.5 w-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -131,7 +131,7 @@ export default function ToolsPage() {
 
                 <Link 
                   href={tool.link}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/50 group-hover:translate-y-[-2px]"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/50 group-hover:translate-y-[-2px]"
                 >
                   {tool.cta}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -160,7 +160,7 @@ export default function ToolsPage() {
                 1
               </div>
               <h3 className="font-semibold text-foreground">You get immediate value</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 No gatekeeping. You enter your site and get real, prioritized insights instantly.
               </p>
             </div>
@@ -169,7 +169,7 @@ export default function ToolsPage() {
                 2
               </div>
               <h3 className="font-semibold text-foreground">We earn your trust</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 By showing you exactly what's wrong and how to fix it, we prove our expertise before asking for anything.
               </p>
             </div>
@@ -178,7 +178,7 @@ export default function ToolsPage() {
                 3
               </div>
               <h3 className="font-semibold text-foreground">You decide what's next</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Fix it yourself using our free guides, or reply to the email and let's talk about working together.
               </p>
             </div>
