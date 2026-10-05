@@ -14,6 +14,7 @@ export default function ArticleCTA({
   secondaryHref = "/tools",
   secondaryLabel = "Try Free Tools",
   titleAccent,
+  primaryTarget,
 }: {
   badge?: string;
   title?: string;
@@ -24,6 +25,7 @@ export default function ArticleCTA({
   secondaryLabel?: string;
   /** Substring of `title` to highlight, matching the hero's accent treatment */
   titleAccent?: string;
+  primaryTarget?: string;
 }) {
   // Split the headline so the key phrase can carry the primary colour
   const accentIndex = titleAccent ? title.indexOf(titleAccent) : -1;
@@ -73,6 +75,8 @@ export default function ArticleCTA({
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href={primaryHref}
+            target={primaryTarget}
+            rel={primaryTarget === "_blank" ? "noopener noreferrer" : undefined}
             className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/50 sm:w-auto"
           >
             {primaryLabel}

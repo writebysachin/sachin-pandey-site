@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ArticleCTA from "@/components/common/ArticleCTA";
 
 export default function YogaWriteCodePage() {
   return (
@@ -106,21 +107,18 @@ export default function YogaWriteCodePage() {
 
       {/* CTA Section */}
       <section className="py-20">
-        <div className="mx-auto max-w-3xl px-6 lg:px-10 text-center">
-          <h2 className="font-heading text-3xl sm:text-4xl text-foreground mb-4">
-            Yoga Write Code is Live
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            The platform is now available. Explore it and see how it can automate your content operations.
-          </p>
-          <a
-            href="https://yogawritecode.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-primary-hover"
-          >
-            Learn More →
-          </a>
+        <div className="mx-auto max-w-4xl px-6 lg:px-10">
+          <ArticleCTA
+            badge="Yoga Write Code"
+            title="Yoga Write Code is Live."
+            titleAccent="Live"
+            description="The platform is now available. Explore it and see how it can automate your content operations."
+            primaryHref="https://yogawritecode.com"
+            primaryTarget="_blank"
+            primaryLabel="Learn More"
+            secondaryHref="/tools"
+            secondaryLabel="Try Free Tools"
+          />
         </div>
       </section>
     </div>

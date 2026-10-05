@@ -21,6 +21,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import Link from "next/link";
+import ArticleCTA from "@/components/common/ArticleCTA";
 import Image from "next/image";
 
 // ============================================================================
@@ -607,20 +608,17 @@ function FAQ() {
 
 function CTA() {
   return (
-    <Section variant="gradient">
-      <div className="max-w-3xl space-y-8 text-center mx-auto">
-        <Badge>Start a conversation</Badge>
-        <SectionHeading>Let&apos;s build a system that compounds.</SectionHeading>
-        <SectionParagraph className="mx-auto">
-          If you&apos;re working on a B2B marketing problem that feels like a systems problem — a website that doesn&apos;t convert, SEO that isn&apos;t compounding, content that restarts every quarter — I&apos;d like to hear about it. The first conversation is a diagnosis, not a pitch.
-        </SectionParagraph>
-        <div className="pt-4">
-          <a href="mailto:write@sachinpandey.com.np" className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-primary/90 shadow-lg shadow-primary/20">
-            <span>Get Started</span>
-            <span>→</span>
-          </a>
-        </div>
-      </div>
+    <Section>
+      <ArticleCTA
+        badge="Start a conversation"
+        title="Let's build a system that compounds."
+        titleAccent="compounds"
+        description="If you're working on a B2B marketing problem that feels like a systems problem — a website that doesn't convert, SEO that isn't compounding, content that restarts every quarter — I'd like to hear about it. The first conversation is a diagnosis, not a pitch."
+        primaryHref="mailto:write@sachinpandey.com.np"
+        primaryLabel="Get Started"
+        secondaryHref="/insights"
+        secondaryLabel="Read Insights"
+      />
     </Section>
   );
 }
