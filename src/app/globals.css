@@ -211,10 +211,10 @@
 
   .text-p-xl { font-size: 20px; line-height: 28px; letter-spacing: 0; font-weight: 400; }
   .text-p-l  { font-size: 16px; line-height: 24px; letter-spacing: 0.01em; font-weight: 400; }
-  .text-p-m  { font-size: 14px; line-height: 20px; letter-spacing: 0; font-weight: 400; }
+  .text-p-m  { font-size: 16px; line-height: 26px; letter-spacing: 0; font-weight: 400; }
   .text-p-s  { font-size: 14px; line-height: 20px; letter-spacing: 0; font-weight: 400; }
 
-  p { font-size: 14px; line-height: 20px; letter-spacing: 0; }
+  p { font-size: 16px; line-height: 26px; letter-spacing: 0; }
 
   /* Tablet: 768px – 1024px */
   @media (min-width: 768px) {
@@ -226,10 +226,10 @@
 
     .text-p-xl { font-size: 28px; line-height: 36px; letter-spacing: -0.02em; }
     .text-p-l  { font-size: 18px; line-height: 24px; letter-spacing: 0.01em; }
-    .text-p-m  { font-size: 16px; line-height: 24px; letter-spacing: -0.01em; }
+    .text-p-m  { font-size: 16px; line-height: 26px; letter-spacing: -0.01em; }
     .text-p-s  { font-size: 14px; line-height: 20px; }
 
-    p { font-size: 16px; line-height: 24px; letter-spacing: -0.01em; }
+    p { font-size: 16px; line-height: 26px; letter-spacing: -0.01em; }
   }
 
   /* Desktop: 1025px+ */
