@@ -383,7 +383,7 @@ function Problem() {
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                   <span className="text-base font-bold">✦</span>
                 </div>
-                <h3 className="text-base font-semibold text-foreground">{feature.title}</h3>
+                <h3 className="font-sans text-lg font-semibold text-foreground">{feature.title}</h3>
               </div>
               <p className="text-base leading-relaxed text-muted-foreground pl-11">{feature.description}</p>
             </motion.div>
@@ -412,7 +412,7 @@ function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <motion.div key={index} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="group p-8 rounded-2xl border border-border bg-background transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-              <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">{service.title}</h3>
+              <h3 className="font-sans text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">{service.title}</h3>
               <p className="text-muted-foreground">{service.description}</p>
             </motion.div>
           ))}
@@ -475,7 +475,7 @@ function Process() {
               <motion.div key={step.number} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="py-8 grid grid-cols-12 gap-4 items-start">
                 <span className="col-span-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-base font-bold text-primary">{step.number}</span>
                 <div className="col-span-10 space-y-2">
-                  <h3 className="text-base font-semibold text-foreground">{step.title}</h3>
+                  <h3 className="font-sans text-lg font-semibold text-foreground">{step.title}</h3>
                   <p className="text-base text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
@@ -592,7 +592,7 @@ function FAQ() {
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <motion.div key={index} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="group space-y-3 rounded-2xl border border-transparent p-4 transition-all duration-300 hover:bg-surface hover:border-border">
-              <h3 className="text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-3">
+              <h3 className="font-sans text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-3">
                 <span className="text-primary text-lg">+</span>
                 {faq.question}
               </h3>

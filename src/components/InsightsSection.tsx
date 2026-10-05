@@ -96,7 +96,7 @@ export default function InsightsSection() {
                       ↗
                     </span>
                   </div>
-                  <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="font-sans text-lg font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   <p className="text-base text-muted-foreground leading-relaxed line-clamp-3">

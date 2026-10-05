@@ -96,7 +96,7 @@ export default function YogaWriteCodePage() {
                 className="rounded-2xl border border-border bg-background p-6 hover:border-primary/50 transition-colors"
               >
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 text-green-700 mb-4">✓</div>
-                <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
+                <h3 className="font-sans text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
                 <p className="text-base text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}

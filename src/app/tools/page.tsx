@@ -159,7 +159,7 @@ export default function ToolsPage() {
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-lg">
                 1
               </div>
-              <h3 className="font-semibold text-foreground">You get immediate value</h3>
+              <h3 className="font-sans text-xl font-semibold text-foreground">You get immediate value</h3>
               <p className="text-base text-muted-foreground">
                 No gatekeeping. You enter your site and get real, prioritized insights instantly.
               </p>
@@ -168,7 +168,7 @@ export default function ToolsPage() {
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-lg">
                 2
               </div>
-              <h3 className="font-semibold text-foreground">We earn your trust</h3>
+              <h3 className="font-sans text-xl font-semibold text-foreground">We earn your trust</h3>
               <p className="text-base text-muted-foreground">
                 By showing you exactly what's wrong and how to fix it, we prove our expertise before asking for anything.
               </p>
@@ -177,7 +177,7 @@ export default function ToolsPage() {
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-lg">
                 3
               </div>
-              <h3 className="font-semibold text-foreground">You decide what's next</h3>
+              <h3 className="font-sans text-xl font-semibold text-foreground">You decide what's next</h3>
               <p className="text-base text-muted-foreground">
                 Fix it yourself using our free guides, or reply to the email and let's talk about working together.
               </p>
