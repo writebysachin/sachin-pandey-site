@@ -190,4 +190,61 @@
   html {
     @apply scroll-smooth;
   }
+
+  /* ---------------------------------------------------------------------
+     Responsive typography scale (from style guide)
+     Mobile: max-width 767px (base) | Tablet: 768–1024px | Desktop: 1025px+
+     Headings: Medium (500), Satoshi via --font-heading (Playfair Display)
+     Paragraphs: Regular (400), body sans
+     --------------------------------------------------------------------- */
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading), Georgia, serif;
+    font-weight: 500;
+  }
+
+  /* Mobile (base) */
+  h1 { font-size: 32px; line-height: 40px; letter-spacing: -0.02em; }
+  h2 { font-size: 24px; line-height: 32px; letter-spacing: -0.02em; }
+  h3 { font-size: 20px; line-height: 28px; letter-spacing: 0; }
+  h4 { font-size: 16px; line-height: 24px; letter-spacing: 0.01em; }
+  h5 { font-size: 14px; line-height: 24px; letter-spacing: 0.01em; }
+
+  .text-p-xl { font-size: 20px; line-height: 28px; letter-spacing: 0; font-weight: 400; }
+  .text-p-l  { font-size: 16px; line-height: 24px; letter-spacing: 0.01em; font-weight: 400; }
+  .text-p-m  { font-size: 14px; line-height: 20px; letter-spacing: 0; font-weight: 400; }
+  .text-p-s  { font-size: 14px; line-height: 20px; letter-spacing: 0; font-weight: 400; }
+
+  p { font-size: 14px; line-height: 20px; letter-spacing: 0; }
+
+  /* Tablet: 768px – 1024px */
+  @media (min-width: 768px) {
+    h1 { font-size: 48px; line-height: 58px; }
+    h2 { font-size: 42px; line-height: 58px; }
+    h3 { font-size: 24px; line-height: 32px; letter-spacing: -0.02em; }
+    h4 { font-size: 20px; line-height: 32px; letter-spacing: 0.02em; }
+    h5 { font-size: 18px; line-height: 24px; }
+
+    .text-p-xl { font-size: 28px; line-height: 36px; letter-spacing: -0.02em; }
+    .text-p-l  { font-size: 18px; line-height: 24px; letter-spacing: 0.01em; }
+    .text-p-m  { font-size: 16px; line-height: 24px; letter-spacing: -0.01em; }
+    .text-p-s  { font-size: 14px; line-height: 20px; }
+
+    p { font-size: 16px; line-height: 24px; letter-spacing: -0.01em; }
+  }
+
+  /* Desktop: 1025px+ */
+  @media (min-width: 1025px) {
+    h1 { font-size: 56px; line-height: 72px; }
+    h2 { font-size: 48px; line-height: 68px; }
+    h3 { font-size: 38px; line-height: 52px; }
+    h4 { font-size: 24px; line-height: 32px; letter-spacing: 0.02em; }
+    h5 { font-size: 20px; line-height: 28px; }
+
+    .text-p-xl { font-size: 32px; line-height: 40px; letter-spacing: -0.02em; }
+    .text-p-l  { font-size: 24px; line-height: 40px; letter-spacing: -0.02em; }
+    .text-p-m  { font-size: 18px; line-height: 28px; letter-spacing: -0.01em; }
+    .text-p-s  { font-size: 16px; line-height: 24px; }
+
+    p { font-size: 18px; line-height: 28px; letter-spacing: -0.01em; }
+  }
 }

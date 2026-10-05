@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: {
+    absolute: "About Sachin Pandey | B2B Marketing Systems Consultant",
+  },
   description:
-    "Sachin Pandey is a B2B marketing systems consultant helping companies build websites, SEO, and content systems that compound over time — now combined with AI workflows.",
+    "Sachin Pandey is a B2B marketing systems consultant helping companies build websites, B2B SEO, and content systems that compound over time, plus AI marketing workflows and Yoga Write Code.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Sachin Pandey | Marketing Systems Consultant",
+    title: "About Sachin Pandey | B2B Marketing Systems Consultant",
     description:
       "B2B marketing systems consultant building websites, SEO, and content systems that compound — plus Yoga Write Code.",
     url: "/about",
@@ -20,12 +22,11 @@ export default function AboutPage() {
       <div className="mx-auto max-w-3xl px-6 lg:px-10 space-y-16">
         <section>
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight text-foreground mb-6">
-            About
+            I&apos;m Sachin Pandey — a marketing systems consultant for B2B companies
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            I&apos;m Sachin Pandey, a marketing systems consultant. I help B2B
-            companies build websites, SEO, and content systems that compound
-            over time — instead of restarting every quarter.
+            I help B2B companies build websites, SEO, and content systems that
+            compound over time — instead of restarting every quarter.
           </p>
         </section>
 
@@ -34,11 +35,11 @@ export default function AboutPage() {
             What I do
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            My work sits at the intersection of B2B website strategy, B2B SEO,
-            B2B content strategy, and content operations. In practice that means
-            figuring out what a website should say, how it should be structured,
-            what content should exist, and how the whole system gets maintained
-            by real people instead of good intentions.
+            My work sits across B2B website strategy, B2B SEO, B2B content
+            strategy, and content operations. In practice that means figuring out
+            what a website should say, how it should be structured, what content
+            should exist, and how the whole system gets maintained by real
+            people instead of good intentions.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Lately that also includes AI-assisted marketing workflows — using AI
@@ -54,10 +55,10 @@ export default function AboutPage() {
           <p className="text-muted-foreground leading-relaxed">
             Most B2B marketing doesn&apos;t fail because of one bad tactic. It
             fails because everything is disconnected — the website says one
-            thing, the content says another, and the "SEO strategy" lives in a
-            document nobody opens. I treat SEO, content, websites, and AI as
-            parts of one system. When the pieces support each other, results
-            compound. When they don&apos;t, every quarter resets.
+            thing, the content says another, and the &quot;SEO strategy&quot;
+            lives in a document nobody opens. I treat SEO, content, websites, and
+            AI as parts of one system. When the pieces support each other,
+            results compound. When they don&apos;t, every quarter resets.
           </p>
         </section>
 
@@ -89,7 +90,7 @@ export default function AboutPage() {
           <p className="text-muted-foreground leading-relaxed">
             Yoga Write Code is a product I&apos;m building from recurring
             problems I kept running into during SEO and content work — topics
-            that got chosen randomly, briefs that took days, outlines that
+            chosen more or less randomly, briefs that took days, outlines that
             needed rewriting from scratch. YWC exists to turn that into a
             repeatable workflow.
           </p>
@@ -122,6 +123,17 @@ export default function AboutPage() {
             Right now that&apos;s a mix of consulting engagements, writing about
             search and content systems, building Yoga Write Code, and learning
             from real users of the tools I&apos;m shipping.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            You can read that thinking in{" "}
+            <Link href="/insights" className="text-primary font-medium hover:underline">
+              my writing
+            </Link>{" "}
+            or try the{" "}
+            <Link href="/tools" className="text-primary font-medium hover:underline">
+              free tools
+            </Link>{" "}
+            I&apos;ve built around the same workflow.
           </p>
         </section>
 
