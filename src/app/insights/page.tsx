@@ -96,11 +96,7 @@ export default function InsightsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="pb-20 md:pb-32">
-        <div className="mx-auto max-w-4xl px-6 lg:px-10">
-          <ArticleCTA titleAccent="actually broken" />
-        </div>
-      </section>
+      <ArticleCTA titleAccent="actually broken" />
     </div>
   );
 }

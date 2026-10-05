@@ -9,7 +9,7 @@ export default function ArticleCTA({
   badge = "Free 30-minute audit",
   title = "Find out what's actually broken in your marketing.",
   description = "Send me your URL. I'll audit your website, SEO, and content against your actual business goals, then tell you the three things to fix first. No pitch deck.",
-  primaryHref = "/contact",
+  primaryHref = "https://calendly.com/writebysachin/seo-content-interview",
   primaryLabel = "Work With Me",
   secondaryHref = "/tools",
   secondaryLabel = "Try Free Tools",
@@ -41,30 +41,14 @@ export default function ArticleCTA({
     );
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-border bg-surface/50 p-8 md:p-12 text-center">
-      {/* Brand wash, echoing the capability strip on the homepage */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-32 -right-24 h-72 w-72 rounded-full opacity-20 blur-3xl"
-        style={{
-          background: "linear-gradient(135deg, #630ED4 0%, #A855F7 50%, #EC4899 100%)",
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-32 -left-24 h-72 w-72 rounded-full opacity-10 blur-3xl"
-        style={{
-          background: "linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)",
-        }}
-      />
-
-      <div className="relative">
+    <div className="relative w-full border-y border-border bg-background py-16 md:py-20">
+      <div className="mx-auto max-w-3xl px-6 text-center lg:px-10">
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-primary">
           <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
           {badge}
         </span>
 
-        <h2 className="mx-auto mt-6 max-w-2xl font-heading text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl md:text-4xl">
+        <h2 className="mx-auto mt-6 max-w-2xl font-sans text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
           {headline}
         </h2>
 
@@ -77,7 +61,7 @@ export default function ArticleCTA({
             href={primaryHref}
             target={primaryTarget}
             rel={primaryTarget === "_blank" ? "noopener noreferrer" : undefined}
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/50 sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/50 sm:w-auto"
           >
             {primaryLabel}
             <ArrowUpRight
@@ -87,7 +71,7 @@ export default function ArticleCTA({
           </Link>
           <Link
             href={secondaryHref}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-background px-8 py-4 text-base font-semibold text-foreground transition-all hover:border-primary/30 hover:bg-surface focus:outline-none focus:ring-2 focus:ring-ring sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-border bg-background px-8 py-4 text-base font-semibold text-foreground transition-all hover:border-primary/30 hover:bg-surface focus:outline-none focus:ring-2 focus:ring-ring sm:w-auto"
           >
             <FileText className="h-4 w-4" aria-hidden="true" />
             {secondaryLabel}

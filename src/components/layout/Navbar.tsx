@@ -65,7 +65,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:block">
           <a
-            href="https://calendly.com/sachinpandey0/seo-content-interview"
+            href="https://calendly.com/writebysachin/seo-content-interview"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -108,7 +108,7 @@ export default function Navbar() {
               
               <div className="pt-2">
                 <a
-                  href="https://calendly.com/sachinpandey0/seo-content-interview"
+                  href="https://calendly.com/writebysachin/seo-content-interview"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full"

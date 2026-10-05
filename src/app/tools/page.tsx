@@ -187,9 +187,7 @@ export default function ToolsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t border-border py-20 md:py-32">
-        <div className="mx-auto max-w-4xl px-6 lg:px-10">
-          <ArticleCTA
+      <ArticleCTA
             badge="When the tools aren't enough"
             title="The tools show you what's broken. I'll show you how to fix it."
             titleAccent="how to fix it"
@@ -197,8 +195,6 @@ export default function ToolsPage() {
             secondaryHref="/insights"
             secondaryLabel="Read Insights"
           />
-        </div>
-      </section>
     </div>
   );
 }

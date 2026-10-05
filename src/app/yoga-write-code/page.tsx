@@ -106,21 +106,17 @@ export default function YogaWriteCodePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="mx-auto max-w-4xl px-6 lg:px-10">
-          <ArticleCTA
-            badge="Yoga Write Code"
-            title="Yoga Write Code is Live."
-            titleAccent="Live"
-            description="The platform is now available. Explore it and see how it can automate your content operations."
-            primaryHref="https://yogawritecode.com"
-            primaryTarget="_blank"
-            primaryLabel="Learn More"
-            secondaryHref="/tools"
-            secondaryLabel="Try Free Tools"
-          />
-        </div>
-      </section>
+      <ArticleCTA
+        badge="Yoga Write Code"
+        title="Yoga Write Code is Live."
+        titleAccent="Live"
+        description="The platform is now available. Explore it and see how it can automate your content operations."
+        primaryHref="https://yogawritecode.com"
+        primaryTarget="_blank"
+        primaryLabel="Learn More"
+        secondaryHref="/tools"
+        secondaryLabel="Try Free Tools"
+      />
     </div>
   );
 }

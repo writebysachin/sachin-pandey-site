@@ -608,18 +608,17 @@ function FAQ() {
 
 function CTA() {
   return (
-    <Section>
-      <ArticleCTA
+    <ArticleCTA
         badge="Start a conversation"
         title="Let's build a system that compounds."
         titleAccent="compounds"
         description="If you're working on a B2B marketing problem that feels like a systems problem — a website that doesn't convert, SEO that isn't compounding, content that restarts every quarter — I'd like to hear about it. The first conversation is a diagnosis, not a pitch."
-        primaryHref="mailto:write@sachinpandey.com.np"
+        primaryHref="https://calendly.com/writebysachin/seo-content-interview"
+        primaryTarget="_blank"
         primaryLabel="Get Started"
         secondaryHref="/insights"
         secondaryLabel="Read Insights"
       />
-    </Section>
   );
 }
 
