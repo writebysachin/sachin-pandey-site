@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 const navigation = [
   { name: "About", href: "/about" },
   { name: "Insights", href: "/insights" },
-  { name: "Tools", href: "/tools" }, // <-- NEW TOOLS LINK ADDED HERE
+  { name: "Tools", href: "/tools" },
   { name: "Work With Me", href: "/contact" },
   { name: "Yoga Write Code", href: "/yoga-write-code" },
 ];
