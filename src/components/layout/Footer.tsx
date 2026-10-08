@@ -17,6 +17,11 @@ export default function Footer() {
         
         {/* Left Side: Subscribe Form + Copyright */}
         <div className="flex flex-col items-center gap-3 text-center lg:items-start lg:text-left">
+          <p className="font-medium text-foreground">
+            © {new Date().getFullYear()} Sachin Pandey
+          </p>
+          <p>I help B2B companies build websites, SEO, and content systems that compound over time.</p>
+
           {/* Substack Subscribe Form */}
           <form
             action="https://writebysachin.substack.com/subscribe"
@@ -45,11 +50,6 @@ export default function Footer() {
             <a href="https://substack.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">our Privacy Policy</a> and{" "}
             <a href="https://substack.com/tos" target="_blank" rel="noopener noreferrer" className="underline">our Information collection notice</a>.
           </p>
-
-          <p className="font-medium text-foreground">
-            © {new Date().getFullYear()} Sachin Pandey
-          </p>
-          <p>I help B2B companies build websites, SEO, and content systems that compound over time.</p>
         </div>
         
         {/* Middle: Quick Links */}
