@@ -13,6 +13,23 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background py-8">
+      {/* Substack Subscribe */}
+      <div className="mx-auto mb-10 flex max-w-7xl flex-col items-center gap-4 px-6 lg:px-10">
+        <h2 className="text-lg font-medium text-foreground">
+          Subscribe to my newsletter
+        </h2>
+        <iframe
+          src="https://writebysachin.substack.com/embed"
+          className="w-full max-w-[480px]"
+          height={320}
+          style={{ border: "1px solid #EEE", background: "white" }}
+          frameBorder="0"
+          scrolling="no"
+          loading="lazy"
+          title="Subscribe to Sachin Pandey's newsletter on Substack"
+        />
+      </div>
+
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-base text-muted-foreground lg:flex-row lg:px-10">
         
         {/* Left Side: Copyright & Title */}
