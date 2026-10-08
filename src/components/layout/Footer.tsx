@@ -13,27 +13,39 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background py-8">
-      {/* Substack Subscribe */}
-      <div className="mx-auto mb-10 flex max-w-7xl flex-col items-center gap-4 px-6 lg:px-10">
-        <h2 className="text-lg font-medium text-foreground">
-          Subscribe to my newsletter
-        </h2>
-        <iframe
-          src="https://writebysachin.substack.com/embed"
-          className="w-full max-w-[480px]"
-          height={320}
-          style={{ border: "1px solid #EEE", background: "white" }}
-          frameBorder="0"
-          scrolling="no"
-          loading="lazy"
-          title="Subscribe to Sachin Pandey's newsletter on Substack"
-        />
-      </div>
-
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-base text-muted-foreground lg:flex-row lg:px-10">
         
-        {/* Left Side: Copyright & Title */}
-        <div className="flex flex-col items-center gap-1 text-center lg:items-start lg:text-left">
+        {/* Left Side: Subscribe Form + Copyright */}
+        <div className="flex flex-col items-center gap-3 text-center lg:items-start lg:text-left">
+          {/* Substack Subscribe Form */}
+          <form
+            action="https://writebysachin.substack.com/subscribe"
+            method="get"
+            target="_blank"
+            className="flex w-full max-w-[420px] items-center overflow-hidden rounded-full border border-primary bg-background focus-within:ring-2 focus-within:ring-primary/40"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Type your email..."
+              required
+              className="flex-1 bg-transparent px-5 py-2.5 text-foreground outline-none placeholder:text-muted-foreground"
+              aria-label="Email address"
+            />
+            <button
+              type="submit"
+              className="bg-primary px-6 py-2.5 font-medium text-white transition-colors hover:bg-primary-hover"
+            >
+              Subscribe
+            </button>
+          </form>
+          <p className="max-w-[420px] text-xs text-muted-foreground">
+            By subscribing you agree to{" "}
+            <a href="https://substack.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Substack's Terms of Use</a>,{" "}
+            <a href="https://substack.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">our Privacy Policy</a> and{" "}
+            <a href="https://substack.com/tos" target="_blank" rel="noopener noreferrer" className="underline">our Information collection notice</a>.
+          </p>
+
           <p className="font-medium text-foreground">
             © {new Date().getFullYear()} Sachin Pandey
           </p>
