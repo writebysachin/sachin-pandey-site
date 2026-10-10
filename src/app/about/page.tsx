@@ -13,6 +13,21 @@ export const metadata: Metadata = {
     description:
       "B2B marketing systems consultant building websites, SEO, and content systems that compound — plus Yoga Write Code.",
     url: "/about",
+    images: [
+      {
+        url: "/about/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Sachin Pandey — B2B Marketing Systems Consultant",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Sachin Pandey | B2B Marketing Systems Consultant",
+    description:
+      "B2B marketing systems consultant building websites, SEO, and content systems that compound — plus Yoga Write Code.",
+    images: ["/about/opengraph-image"],
   },
 };
 
@@ -20,14 +35,24 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background py-20">
       <div className="mx-auto max-w-3xl px-6 lg:px-10 space-y-16">
-        <section>
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight text-foreground mb-6">
-            I&apos;m Sachin Pandey — a marketing systems consultant for B2B companies
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            I help B2B companies build websites, SEO, and content systems that
-            compound over time — instead of restarting every quarter.
-          </p>
+        <section className="flex flex-col-reverse sm:flex-row sm:items-center gap-8 sm:gap-12">
+          <div className="flex-1 space-y-6">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight text-foreground">
+              I&apos;m Sachin Pandey — a marketing systems consultant for B2B
+              companies
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              I help B2B companies build websites, SEO, and content systems that
+              compound over time — instead of restarting every quarter.
+            </p>
+          </div>
+          <img
+            src="/images/sachin-pandey.png"
+            alt="Sachin Pandey"
+            width={864}
+            height={924}
+            className="h-40 w-40 sm:h-52 sm:w-52 lg:h-60 lg:w-60 rounded-3xl object-cover ring-1 ring-border shadow-lg shrink-0 self-center sm:self-start"
+          />
         </section>
 
         <section className="space-y-4">
